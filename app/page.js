@@ -8,6 +8,7 @@ import {
   toBand,
   bandLabel,
 } from "@/lib/progress";
+import AuthButton from "@/components/AuthButton";
 
 const SECTIONS = [
   {
@@ -85,6 +86,9 @@ export default function Dashboard() {
           sont indicatives : elles mesurent ce que vous avez fait ici, pas ce que
           fera un correcteur ETS.
         </p>
+        <div style={{ marginTop: 14 }}>
+          <AuthButton />
+        </div>
       </div>
 
       <div className="panel">
@@ -164,7 +168,7 @@ export default function Dashboard() {
             onClick={() => {
               if (
                 window.confirm(
-                  "Effacer toute la progression enregistree dans ce navigateur ?"
+                  "Effacer toute la progression enregistree (y compris celle synchronisee sur votre compte) ?"
                 )
               ) {
                 reset();
