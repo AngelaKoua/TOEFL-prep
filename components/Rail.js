@@ -41,6 +41,13 @@ export default function Rail() {
               </Link>
             );
           })}
+          <Link
+            href="/templates"
+            className="rail-link"
+            data-active={pathname.startsWith("/templates")}
+          >
+            <span>Writing templates</span>
+          </Link>
         </div>
       </div>
 

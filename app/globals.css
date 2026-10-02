@@ -917,6 +917,62 @@ details.reveal > div {
   overflow-x: auto;
 }
 
+/* writing templates */
+
+.tpl-fields {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 12px;
+  margin: 16px 0 12px;
+}
+.tpl-field {
+  display: grid;
+  gap: 4px;
+}
+.tpl-input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--rose-line);
+  border-radius: var(--radius-s);
+  padding: 9px 12px;
+}
+.tpl-input:focus {
+  border-color: var(--rose);
+  outline: none;
+}
+
+.tpl-list {
+  display: grid;
+  gap: 14px;
+}
+.tpl-list .panel + .panel {
+  margin-top: 0;
+}
+.tpl-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.tpl-body {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  max-width: var(--measure);
+  max-height: 280px;
+  overflow-y: auto;
+}
+.btn.ghost.tpl-delete {
+  color: var(--bad);
+}
+.btn.ghost.tpl-delete:hover {
+  background: var(--bad-bg);
+  color: var(--bad);
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -955,5 +1011,8 @@ details.reveal > div {
   }
   .test-score {
     grid-column: 2;
+  }
+  .tpl-fields {
+    grid-template-columns: 1fr;
   }
 }
