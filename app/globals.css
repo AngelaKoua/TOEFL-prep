@@ -973,6 +973,83 @@ details.reveal > div {
   color: var(--bad);
 }
 
+/* learning */
+
+.learn-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--rose-line);
+  margin-bottom: 20px;
+}
+.learn-tab {
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  padding: 10px 16px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.learn-tab:hover {
+  color: var(--rose-deep);
+}
+.learn-tab[data-on="true"] {
+  color: var(--rose-deep);
+  border-bottom-color: var(--rose);
+}
+
+.learn-intro {
+  max-width: var(--measure);
+}
+.learn-select {
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+}
+.learn-current {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.test-row.learn-row:hover {
+  background: var(--white);
+}
+.learn-link {
+  color: var(--ink);
+}
+.learn-link:hover {
+  color: var(--rose-deep);
+}
+
+.status-toggle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+  border: 1px solid var(--rose-line);
+  background: #f5f2f3;
+  color: var(--ink-faint);
+}
+.status-toggle:hover {
+  border-color: var(--rose);
+}
+.status-toggle[data-done="true"] {
+  background: var(--good-bg);
+  border-color: var(--good-bg);
+  color: var(--good);
+}
+
+mark.vocab {
+  background: var(--rose-mist);
+  color: var(--rose-deep);
+  font-weight: 700;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -1009,8 +1086,10 @@ details.reveal > div {
   .test-row {
     grid-template-columns: 34px 1fr;
   }
-  .test-score {
+  .test-score,
+  .status-toggle {
     grid-column: 2;
+    justify-self: start;
   }
   .tpl-fields {
     grid-template-columns: 1fr;

@@ -48,6 +48,13 @@ export default function Rail() {
           >
             <span>Writing templates</span>
           </Link>
+          <Link
+            href="/learning"
+            className="rail-link"
+            data-active={pathname.startsWith("/learning")}
+          >
+            <span>Learning</span>
+          </Link>
         </div>
       </div>
 
